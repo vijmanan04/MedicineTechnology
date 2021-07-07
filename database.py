@@ -1,17 +1,17 @@
-import mysql.connector
+import MySQLdb
 import datetime
 import itertools
 
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="Apnabuddha04$",
+mydb = MySQLdb.connect(
+    host="Munster123.mysql.pythonanywhere-services.com",
+    user="Munster123",
+    passwd="G@PsgQvA@38Dtj8$",
     database="volunteering_check_in"
     )
 
 mycursor = mydb.cursor()
 #mycursor.execute("DROP TABLE volunteer")
-#mycursor.execute("CREATE TABLE volunteer (id VARCHAR(255), date VARCHAR(255), enter VARCHAR(255), go VARCHAR(255), i VARCHAR(255), time VARCHAR(255))")
+mycursor.execute("CREATE TABLE volunteer (id VARCHAR(255), date VARCHAR(255), enter VARCHAR(255), go VARCHAR(255), i VARCHAR(255), time VARCHAR(255))")
 #query = "ALTER TABLE volunteeer ADD in VARCHAR(255) AFTER go"
 
 def add(id, date, enter, leave, here, time):
