@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+</head>
+
+<body>
+  <h1>Sign in</h1>
+  <h2>Volunteer</h1>
+  <div>
+  	<form method="POST" action="">
+  		{{ form.hidden_tag() }}
+  		<fieldset class="form-group">
+  			<div class = "form-group">
+  				{{ form.Id.label() }}
+  				{{ form.Id() }}
+  			</div>
+  		</fieldset>
+  		<div class = "form-group">
+  			{{ form.submit()}}
+  		</div>
+  	</form>
+  </div>
+  
+  </form>
+  <h2>Admin</h2>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
